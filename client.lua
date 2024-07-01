@@ -53,8 +53,15 @@ RegisterCommand('-scenecreate', function()
     coords = placement
     
     local scene = lib.inputDialog('Add Scene', {
-        {type = 'input', label = 'Enter Text', description = 'Scene Text', required = true, min = 4, max = 600},
-        {type = 'input', label = 'Color', description = 'Color', icon = 'hashtag'},
+        {type = 'textarea', label = 'Enter Text', description = 'Scene Text', required = true, min = 4, max = 600},
+        {type = "select", label = "Select text color",  options = {
+            { value = 'green', label = 'Green' },
+            { value = 'yellow', label = 'Yellow' },
+            { value = 'red', label = 'Red' },
+            { value = 'white', label = 'White' },
+            { value = 'purple', label = 'Purple' },
+            { value = 'blue', label = 'Blue' }
+        }},
         {type = 'number', label = 'Distance'}
     })
 
